@@ -1,6 +1,16 @@
 # webpack-module-timing-plugin
 
-A webpack plugin for finding slow source files during compilation.
+[![npm version](https://img.shields.io/npm/v/webpack-module-timing-plugin.svg)](https://www.npmjs.com/package/webpack-module-timing-plugin)
+[![CI](https://img.shields.io/github/actions/workflow/status/EricBoum/build-timing-plugin/ci.yml?branch=main&label=ci)](https://github.com/EricBoum/build-timing-plugin/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/webpack-module-timing-plugin.svg)](https://github.com/EricBoum/build-timing-plugin/blob/main/LICENSE)
+
+Find the slowest files in your webpack build.
+
+`webpack-module-timing-plugin` gives you a terminal-first timing report that answers:
+
+- Which source files are expensive to compile?
+- Is the time going into module build, optimize, or emit?
+- In a Vue SFC, is the slowdown in `template`, `script`, or `style`?
 
 It reports:
 
@@ -8,11 +18,28 @@ It reports:
 - A phase summary for module build, optimize, and emit work
 - Vue SFC part timings for `template`, `script`, and `style`
 
-It is designed for teams who want a quick terminal-first answer to:
+## Quick Start
 
-- Which source files are slowing down the build?
-- Is the time spent in module compilation, optimization, or emit?
-- Inside a `.vue` file, which part is expensive?
+```bash
+npm install --save-dev webpack-module-timing-plugin
+```
+
+```js
+const WebpackModuleTimingPlugin = require('webpack-module-timing-plugin')
+
+module.exports = {
+  plugins: [
+    new WebpackModuleTimingPlugin(),
+  ],
+}
+```
+
+## At A Glance
+
+- File-level timing reports for webpack builds
+- Vue SFC timing breakdowns out of the box
+- Helpful for both initial builds and incremental rebuilds
+- Lightweight output that fits directly in the terminal
 
 ## Why This Plugin
 
@@ -64,6 +91,13 @@ module.exports = {
   ],
 }
 ```
+
+## Common Use Cases
+
+- Investigating a suddenly slow local rebuild after a feature branch grows
+- Finding which Vue page or shared component is dominating compile time
+- Spot-checking whether a build slowdown comes from source transforms or later webpack phases
+- Sharing a low-friction build performance signal with the team during optimization work
 
 ## What It Measures
 
@@ -119,6 +153,10 @@ The report is designed to be actionable and lightweight, not a full tracing syst
 - Your webpack build feels slow, but the normal output is too coarse
 - You want file-level timing without introducing a heavy profiling workflow
 - Your project uses Vue SFCs and you want to see whether the bottleneck lives in `template`, `script`, or `style`
+
+## Changelog
+
+See [CHANGELOG.md](https://github.com/EricBoum/build-timing-plugin/blob/main/CHANGELOG.md).
 
 ## Release Checklist
 
