@@ -1,8 +1,8 @@
 # webpack-module-timing-plugin
 
 [![npm version](https://img.shields.io/npm/v/webpack-module-timing-plugin.svg)](https://www.npmjs.com/package/webpack-module-timing-plugin)
-[![CI](https://img.shields.io/github/actions/workflow/status/EricBoum/build-timing-plugin/ci.yml?branch=main&label=ci)](https://github.com/EricBoum/build-timing-plugin/actions/workflows/ci.yml)
-[![license](https://img.shields.io/npm/l/webpack-module-timing-plugin.svg)](https://github.com/EricBoum/build-timing-plugin/blob/main/LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/EricBoum/webpack-module-timing-plugin/ci.yml?branch=main&label=ci)](https://github.com/EricBoum/webpack-module-timing-plugin/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/webpack-module-timing-plugin.svg)](https://github.com/EricBoum/webpack-module-timing-plugin/blob/main/LICENSE)
 
 Find the slowest files in your webpack build.
 
@@ -72,8 +72,8 @@ npm install --save-dev webpack-module-timing-plugin
 
 ## Repository
 
-- Homepage: https://github.com/EricBoum/build-timing-plugin
-- Issues: https://github.com/EricBoum/build-timing-plugin/issues
+- Homepage: https://github.com/EricBoum/webpack-module-timing-plugin
+- Issues: https://github.com/EricBoum/webpack-module-timing-plugin/issues
 
 ## Usage
 
@@ -156,7 +156,7 @@ The report is designed to be actionable and lightweight, not a full tracing syst
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/EricBoum/build-timing-plugin/blob/main/CHANGELOG.md).
+See [CHANGELOG.md](https://github.com/EricBoum/webpack-module-timing-plugin/blob/main/CHANGELOG.md).
 
 ## Release Checklist
 

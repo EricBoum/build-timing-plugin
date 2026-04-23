@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "description": "Inspect webpack build bottlenecks with per-file timing reports and Vue SFC part breakdowns.",
   "author": "EricBoum <zengpeng1622@gmail.com>",
-  "homepage": "https://github.com/EricBoum/build-timing-plugin#readme",
+  "homepage": "https://github.com/EricBoum/webpack-module-timing-plugin#readme",
   "bugs": {
-    "url": "https://github.com/EricBoum/build-timing-plugin/issues"
+    "url": "https://github.com/EricBoum/webpack-module-timing-plugin/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EricBoum/build-timing-plugin.git"
+    "url": "git+https://github.com/EricBoum/webpack-module-timing-plugin.git"
   },
   "main": "index.js",
   "types": "index.d.ts",
