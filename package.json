@@ -2,6 +2,15 @@
   "name": "webpack-module-timing-plugin",
   "version": "0.1.0",
   "description": "A webpack plugin that reports per-file and per-part module build timings.",
+  "author": "EricBoum <zengpeng1622@gmail.com>",
+  "homepage": "https://github.com/EricBoum/build-timing-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/EricBoum/build-timing-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricBoum/build-timing-plugin.git"
+  },
   "main": "index.js",
   "types": "index.d.ts",
   "exports": {

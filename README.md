@@ -22,6 +22,11 @@ It is designed for teams who want a quick terminal-first answer to:
 npm install --save-dev webpack-module-timing-plugin
 ```
 
+## Repository
+
+- Homepage: https://github.com/EricBoum/build-timing-plugin
+- Issues: https://github.com/EricBoum/build-timing-plugin/issues
+
 ## Usage
 
 ```js
@@ -78,8 +83,8 @@ module.exports = {
 
 Before publishing:
 
-1. Update `name`, `version`, `author`, `repository`, and `homepage` in `package.json`.
-2. Add a real Git repository and remote.
+1. Verify the package name is still available on npm.
+2. Bump `version` in `package.json`.
 3. Add CI for `npm test`.
 4. Publish with `npm publish --access public`.
 
