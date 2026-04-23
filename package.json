@@ -1,6 +1,6 @@
 {
   "name": "webpack-module-timing-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Inspect webpack build bottlenecks with per-file timing reports and Vue SFC part breakdowns.",
   "author": "EricBoum <zengpeng1622@gmail.com>",
   "homepage": "https://github.com/EricBoum/webpack-module-timing-plugin#readme",
