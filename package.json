@@ -1,0 +1,35 @@
+{
+  "name": "webpack-module-timing-plugin",
+  "version": "0.1.0",
+  "description": "A webpack plugin that reports per-file and per-part module build timings.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "timing",
+    "performance",
+    "profiling",
+    "build",
+    "vue-loader"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  }
+}
