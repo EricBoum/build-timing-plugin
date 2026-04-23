@@ -1,12 +1,33 @@
 # webpack-module-timing-plugin
 
-A webpack plugin that reports per-file build timings, including Vue SFC parts such as `template`, `script`, and `style`.
+A webpack plugin for finding slow source files during compilation.
+
+It reports:
+
+- The slowest files in the current build
+- A phase summary for module build, optimize, and emit work
+- Vue SFC part timings for `template`, `script`, and `style`
 
 It is designed for teams who want a quick terminal-first answer to:
 
 - Which source files are slowing down the build?
 - Is the time spent in module compilation, optimization, or emit?
 - Inside a `.vue` file, which part is expensive?
+
+## Why This Plugin
+
+Many webpack performance tools focus on the whole build, individual loaders, or bundle size.
+
+This plugin focuses on a different question:
+
+> Which source files are the slowest to compile right now?
+
+That makes it useful when you are trying to:
+
+- Find a handful of expensive files in a large app
+- Understand whether a slow Vue file is heavy in `template`, `script`, or `style`
+- Compare first build and incremental rebuild hotspots
+- Give teammates a simple terminal report without extra dashboards
 
 ## Features
 
@@ -44,6 +65,20 @@ module.exports = {
 }
 ```
 
+## What It Measures
+
+- Module build time, grouped by source file
+- A build phase summary using webpack compiler hooks
+- Vue SFC child module timings derived from `vue-loader` resource queries
+
+## What It Does Not Measure
+
+- Exact loader-by-loader timing
+- Bundle size or output chunk analysis
+- A perfect wall-clock profiler for every internal webpack step
+
+The report is designed to be actionable and lightweight, not a full tracing system.
+
 ## Options
 
 | Option | Type | Default | Description |
@@ -78,6 +113,12 @@ module.exports = {
 │       └── style     ███                                    192ms
 └────────────────────────────────────────────────────────────────────────┘
 ```
+
+## When To Use It
+
+- Your webpack build feels slow, but the normal output is too coarse
+- You want file-level timing without introducing a heavy profiling workflow
+- Your project uses Vue SFCs and you want to see whether the bottleneck lives in `template`, `script`, or `style`
 
 ## Release Checklist
 
